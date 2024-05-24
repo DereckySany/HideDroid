@@ -36,6 +36,7 @@ jobs:
           RELEASE_KEYSTORE_ALIAS: ${{ secrets.RELEASE_KEYSTORE_ALIAS }}
           RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
         run: |
+          chmod a+x ./gradlew
           ./gradlew assembleRelease
       - name: Create APK file
         run: |
